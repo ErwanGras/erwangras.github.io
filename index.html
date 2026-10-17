@@ -16,18 +16,26 @@
     <meta property="og:image" content="https://erwangras.github.io/assets/profile.jpg">
     <link rel="canonical" href="https://erwangras.github.io/">
     
-    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <!-- Instant Dark Theme Background to eliminate white flash on mobile -->
+    <style>
+        html, body {
+            background-color: #07090e !important;
+            color: #f8fafc;
+        }
+    </style>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit (Non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     
-    <!-- Font Awesome Icons 6.5.1 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome Icons 6.5.1 (Non-blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- Custom CSS with cache buster -->
-    <link rel="stylesheet" href="styles.css?v=2.5">
+    <link rel="stylesheet" href="styles.css?v=2.6">
 </head>
-<body>
+<body style="background-color: #07090e;">
 
     <!-- Ambient Glow Lighting -->
     <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
@@ -1288,10 +1296,10 @@
         </div>
     </div>
 
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    <!-- PayPal SDK (Deferred) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" defer></script>
     
-    <!-- Custom JavaScript with cache buster -->
-    <script src="script.js?v=2.5"></script>
+    <!-- Custom JavaScript with cache buster (Deferred) -->
+    <script src="script.js?v=2.6" defer></script>
 </body>
 </html>
