@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erwan Gras | Desarrollador de Software & Técnico en Informática</title>
+    <meta name="description" content="Portafolio profesional de Erwan Gras. Estudiante de Bachillerato Técnico en Informática (CRECE), desarrollador de software, videojuegos, robótica con Arduino y Makey Makey, y políglota en 6 idiomas.">
+    <meta name="keywords" content="Erwan Gras, desarrollador software, tecnico informatica CRECE, videojuegos Unreal Engine, Python, Arduino, robotica, Ciudad del Este, Paraguay">
+    <meta name="author" content="Erwan Gras">
+    
+    <!-- Open Graph / Meta Compartir -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Erwan Gras | Desarrollador de Software & Técnico en Informática">
+    <meta property="og:description" content="Desarrollo de software, videojuegos, robótica interactiva y soluciones digitales. Ciudad del Este, Paraguay.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS with cache buster -->
+    <link rel="stylesheet" href="styles.css?v=2.5">
+</head>
+<body>
+
+    <!-- Ambient Glow Lighting -->
+    <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+    <div class="ambient-glow glow-mid-right" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+
+    <!-- Global Toast Alert -->
+    <div class="toast-container" id="toast-container">
+        <div class="toast" id="global-toast">
+            <i class="fa-solid fa-circle-check"></i>
+            <span id="toast-text">Notificación</span>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20he%20visto%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp" 
+       aria-label="Contactar por WhatsApp directo">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat WhatsApp</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ========================================================================
+         NAVBAR
+         ======================================================================== -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de Erwan Gras">
+                    <div class="brand-badge">EG</div>
+                    <span class="brand-name">Erwan Gras</span>
+                </a>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#formacion" class="nav-link">Formación</a></li>
+                    <li><a href="#idiomas" class="nav-link">Idiomas</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="assets/Curriculum_Erwan_Gras.pdf" download="Curriculum_Erwan_Gras.pdf" class="btn btn-primary btn-sm" aria-label="Descargar curriculum vitae en PDF">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>CV en PDF</span>
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menú de navegación">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================
+             1. HERO SECTION
+             ======================================================================== -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    
+                    <div class="hero-content reveal-fade-up">
+                        <div class="status-pill">
+                            <span class="status-dot"></span>
+                            <span>3er Año Bachillerato Técnico en Informática · CRECE | 18 Años</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Hola, soy <span class="highlight">Erwan Gras</span>
+                        </h1>
+
+                        <div class="hero-typewriter-container">
+                            <span id="typewriter-text">Desarrollador de Software</span>
+                            <span class="typewriter-cursor"></span>
+                        </div>
+
+                        <p class="hero-desc">
+                            18 años. Estudiante del 3er año de Informática (CRECE), ganador de la competencia de creación de videojuegos en Asunción, certificado como Community Manager por el SNPP e instructor profesional en manejo de drones y filmación aérea.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="#proyectos" class="btn btn-primary">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span>Ver Proyectos</span>
+                            </a>
+                            <a href="#servicios" class="btn btn-secondary">
+                                <i class="fa-solid fa-drone"></i>
+                                <span>Servicios de Drones</span>
+                            </a>
+                            <a href="assets/Curriculum_Erwan_Gras.pdf" download="Curriculum_Erwan_Gras.pdf" class="btn btn-outline">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <span>Descargar CV</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number">3er Año</span>
+                                <span class="stat-label">BTI · CRECE (18 Años)</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">🏆 1er Puesto</span>
+                                <span class="stat-label">Videojuegos Asunción</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Instructor</span>
+                                <span class="stat-label">Drones & Filmación 4K</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">CM SNPP</span>
+                                <span class="stat-label">Certificado Oficial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Profile Card -->
+                    <div class="hero-visual reveal-fade-up delay-200">
+                        <div class="profile-card-wrapper">
+                            <div class="profile-card-glow"></div>
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="floating-chip floating-chip-1">
+                                <div class="chip-icon blue">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="chip-text">
+                                    <strong>CRECE Informática</strong>
+                                    <span>3er Año · Graduando</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="floating-chip floating-chip-2">
+                                <div class="chip-icon gold">
+                                    <i class="fa-solid fa-trophy"></i>
+                                </div>
+                                <div class="chip-text">
+                                    <strong>1er Puesto Asunción</strong>
+                                    <span>Creación Videojuegos</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-card">
+                                <div class="profile-img-box">
+                                    <img src="assets/profile.jpg" alt="Foto de perfil de Erwan Gras" class="profile-img">
+                                    <div class="profile-img-overlay"></div>
+                                    <div class="profile-overlay-badge">
+                                        <div class="badge-name-role">
+                                            <h3>Erwan Gras</h3>
+                                            <p><i class="fa-solid fa-location-dot" style="margin-right: 5px;"></i>Ciudad del Este, Paraguay</p>
+                                        </div>
+                                        <span class="tag-pill" style="background: rgba(99, 102, 241, 0.3); color:#fff; border-color: rgba(99, 102, 241, 0.5);">18 Años · BTI 3°</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             2. SOBRE MÍ SECTION
+             ======================================================================== -->
+        <section id="sobre-mi" class="section about-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-user"></i> Conoce mi perfil</span>
+                    <h2 class="section-title">Sobre Mí & Enfoque</h2>
+                    <p class="section-desc">Compromiso, excelencia técnica demostrada y pasión por la innovación tecnológica, los videojuegos y los drones.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-narrative reveal-fade-up">
+                        <p class="lead-text">
+                            "Tengo 18 años y actualmente curso el 3er año del Bachillerato Técnico en Informática (BTI) en el CRECE. Soy una persona proactiva y organizada, con una mentalidad enfocada en resultados y capacidad para decidir con rapidez bajo presión."
+                        </p>
+                        <p>
+                            He sido galardonado como <strong>ganador del primer puesto en la competencia de creación de videojuegos en Asunción</strong>, cuento con <strong>certificación oficial como Community Manager por el SNPP</strong> y poseo <strong>certificación profesional como Instructor en Manejo y Pilotaje de Drones</strong>, brindando servicios de capacitación técnica de vuelo y filmación aérea profesional.
+                        </p>
+                        <p>
+                            Mi meta es aportar valor de alto impacto en proyectos de software, producciones audiovisuales con drones, creación de videojuegos interactivos y tecnologías emergentes.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                            <a href="#servicios" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Ver Servicios Disponibles</span>
+                            </a>
+                            <a href="#contacto" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>Hablemos de Oportunidades</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-features-grid reveal-fade-up delay-200">
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <h4>Ganador Videojuegos Asunción</h4>
+                            <p>1er puesto en competencia nacional en Asunción, destacando en diseño de mecánicas, lógicas y físicas 3D.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                                <i class="fa-solid fa-helicopter"></i>
+                            </div>
+                            <h4>Instructor de Drones Certificado</h4>
+                            <p>Capacitación técnica en pilotaje de drones recreativos y profesionales, además de servicios de filmación aérea en 4K.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h4>Community Manager (SNPP)</h4>
+                            <p>Certificación oficial en gestión de comunidades digitales, marketing de contenidos y comunicación estratégica.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon-wrapper" style="background: rgba(99, 102, 241, 0.15); color: var(--primary-light);">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <h4>Perfil Políglota (6 Idiomas)</h4>
+                            <p>Fluidez en Español, Francés, Inglés, Guaraní, Portugués y Chino para interacción y clientes globales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             3. EDUCACIÓN & TRAYECTORIA SECTION
+             ======================================================================== -->
+        <section id="formacion" class="section education-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Formación Académica</span>
+                    <h2 class="section-title">Educación & Méritos</h2>
+                    <p class="section-desc">Bases sólidas en ciencias informáticas, excelencia estudiantil y compromiso continuo con el aprendizaje.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+
+                    <!-- Item 1: CRECE 3er Año -->
+                    <div class="timeline-item reveal-fade-up">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge">En curso · 3er Año (Graduando)</span>
+                            <div class="timeline-header">
+                                <h3 class="timeline-institution">Centro Regional de Educación "DR. JOSÉ GASPAR RODRÍGUEZ DE FRANCIA" (CRECE)</h3>
+                                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2024 - 2026 (Presente)</span>
+                            </div>
+                            <h4 class="timeline-degree">Bachillerato Técnico en Informática (BTI) · 3er Año</h4>
+                            <p class="timeline-details">
+                                Cursando actualmente el <strong>3er y último año de graduación</strong>. Formación de excelencia técnica que integra programación orientada a objetos y backend con Python y Visual Basic .NET, bases de datos relacionales en SQL, ensamble de hardware, robótica con microcontroladores Arduino y redes de comunicación.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-pill">3er Año Graduando</span>
+                                <span class="tag-pill">Visual Studio Basic</span>
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">Bases de Datos SQL</span>
+                                <span class="tag-pill">Robótica Arduino</span>
+                                <span class="tag-pill">Hardware & Redes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Ganador Videojuegos Asunción -->
+                    <div class="timeline-item reveal-fade-up delay-100">
+                        <div class="timeline-node" style="border-color: #fbbf24; box-shadow: 0 0 10px #fbbf24;"></div>
+                        <div class="timeline-card" style="border-color: rgba(245, 158, 11, 0.3);">
+                            <span class="timeline-badge honors" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">
+                                <i class="fa-solid fa-trophy"></i> 1er Puesto Nacional · Campeón
+                            </span>
+                            <div class="timeline-header">
+                                <h3 class="timeline-institution">Competencia de Creación de Videojuegos · Asunción</h3>
+                                <span class="timeline-period"><i class="fa-solid fa-award"></i> Asunción, Paraguay</span>
+                            </div>
+                            <h4 class="timeline-degree">Ganador del Primer Lugar en Desarrollo de Videojuegos</h4>
+                            <p class="timeline-details">
+                                Galardonado con el <strong>Primer Lugar</strong> en la competencia nacional de desarrollo de videojuegos realizada en la capital del país. Reconocido por el jurado evaluador por la innovación en mecánicas de juego en 3D, controladores de movimiento fluidos, físicas dinámicas y arquitectura de código eficiente.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-pill">1er Lugar Nacional</span>
+                                <span class="tag-pill">Unreal Engine 5</span>
+                                <span class="tag-pill">Scratch / C++</span>
+                                <span class="tag-pill">Diseño Lúdico 3D</span>
+                                <span class="tag-pill">Físicas & Colisiones</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Certificación Instructor Drones -->
+                    <div class="timeline-item reveal-fade-up delay-200">
+                        <div class="timeline-node" style="border-color: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan);"></div>
+                        <div class="timeline-card" style="border-color: rgba(6, 182, 212, 0.3);">
+                            <span class="timeline-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.4);">
+                                <i class="fa-solid fa-helicopter"></i> Certificación Profesional
+                            </span>
+                            <div class="timeline-header">
+                                <h3 class="timeline-institution">Certificación Profesional como Instructor de Manejo de Drones</h3>
+                                <span class="timeline-period"><i class="fa-solid fa-certificate"></i> Habilitación Oficial</span>
+                            </div>
+                            <h4 class="timeline-degree">Instructor en Pilotaje de Drones Profesionales & Filmación Aérea</h4>
+                            <p class="timeline-details">
+                                Acreditación como <strong>Instructor de Vuelo</strong> capacitado para la enseñanza teórica y práctica de pilotaje de drones recreativos y de grado profesional. Servicios activos de capacitación personalizada en seguridad de vuelo, calibración de sensores, modos cinemáticos y producción de filmación aérea 4K.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-pill">Instructor de Vuelo</span>
+                                <span class="tag-pill">Drones Profesionales</span>
+                                <span class="tag-pill">Filmación Aérea 4K</span>
+                                <span class="tag-pill">Capacitación Técnica</span>
+                                <span class="tag-pill">Seguridad Operacional</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Certificación Community Manager SNPP -->
+                    <div class="timeline-item reveal-fade-up delay-300">
+                        <div class="timeline-node" style="border-color: var(--accent-emerald); box-shadow: 0 0 10px var(--accent-emerald);"></div>
+                        <div class="timeline-card" style="border-color: rgba(16, 185, 129, 0.3);">
+                            <span class="timeline-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.4);">
+                                <i class="fa-solid fa-certificate"></i> Certificación Oficial SNPP
+                            </span>
+                            <div class="timeline-header">
+                                <h3 class="timeline-institution">Servicio Nacional de Promoción Profesional (SNPP)</h3>
+                                <span class="timeline-period"><i class="fa-solid fa-id-card"></i> Certificación Nacional</span>
+                            </div>
+                            <h4 class="timeline-degree">Certificación Oficial como Community Manager</h4>
+                            <p class="timeline-details">
+                                Certificación oficial expedida por el SNPP que valida competencias profesionales en diseño de estrategias de marketing digital, planificación de parrillas de contenidos, administración de plataformas online, optimización de engagement y analítica de métricas.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-pill">SNPP Oficial</span>
+                                <span class="tag-pill">Community Manager</span>
+                                <span class="tag-pill">Marketing Digital</span>
+                                <span class="tag-pill">Estrategia de Contenidos</span>
+                                <span class="tag-pill">Analítica Social</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Colegio La Paz -->
+                    <div class="timeline-item reveal-fade-up delay-400">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge honors"><i class="fa-solid fa-medal"></i> Graduado con Honores</span>
+                            <div class="timeline-header">
+                                <h3 class="timeline-institution">Colegio "LA PAZ"</h3>
+                                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2012 - 2023</span>
+                            </div>
+                            <h4 class="timeline-degree">Educación Escolar Básica (Maternal al 9° Grado)</h4>
+                            <p class="timeline-details">
+                                Trayectoria escolar completa culminada desde maternal hasta el 9° grado, graduado con honores por excelencia académica y liderazgo estudiantil.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag-pill">Excelencia Académica</span>
+                                <span class="tag-pill">Honores</span>
+                                <span class="tag-pill">Liderazgo Estudiantil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             4. IDIOMAS (PERFIL POLÍGLOTA) SECTION
+             ======================================================================== -->
+        <section id="idiomas" class="section languages-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-language"></i> Comunicación Global</span>
+                    <h2 class="section-title">Perfil Políglota (6 Idiomas)</h2>
+                    <p class="section-desc">Capacidad multicultural excepcional para interactuar con equipos, clientes y documentación técnica a escala internacional.</p>
+                </div>
+
+                <div class="languages-grid">
+                    
+                    <!-- Español -->
+                    <div class="lang-card reveal-fade-up">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇪🇸</span>
+                                <h3 class="lang-name">Español</h3>
+                            </div>
+                            <span class="lang-level-badge">Nativo · 100%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="100"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>Dominio Total</span>
+                            <span>Lengua Materna</span>
+                        </div>
+                        <p class="lang-desc">Excelente redacción técnica, oratoria profesional y articulación de conceptos lógicos y de negocios.</p>
+                    </div>
+
+                    <!-- Francés -->
+                    <div class="lang-card reveal-fade-up delay-100">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇫🇷</span>
+                                <h3 class="lang-name">Francés</h3>
+                            </div>
+                            <span class="lang-level-badge">Fluido · 100%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="100"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>Bilingüe</span>
+                            <span>Conversación & Técnico</span>
+                        </div>
+                        <p class="lang-desc">Fluidez completa oral y escrita. Capacidad total para negociaciones, documentación y entorno laboral internacional.</p>
+                    </div>
+
+                    <!-- Inglés -->
+                    <div class="lang-card reveal-fade-up delay-200">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇬🇧</span>
+                                <h3 class="lang-name">Inglés</h3>
+                            </div>
+                            <span class="lang-level-badge">Avanzado · 100%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="100"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>Profesional</span>
+                            <span>Documentación & Código</span>
+                        </div>
+                        <p class="lang-desc">Lectura técnica avanzada, interacción fluida en repositorios globales, librerías y estándares de programación.</p>
+                    </div>
+
+                    <!-- Guaraní -->
+                    <div class="lang-card reveal-fade-up">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇵🇾</span>
+                                <h3 class="lang-name">Guaraní</h3>
+                            </div>
+                            <span class="lang-level-badge">Nativo · 100%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="100"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>Lengua Oficial</span>
+                            <span>Fluidez Cultural</span>
+                        </div>
+                        <p class="lang-desc">Comunicación fluida en el idioma oficial de Paraguay, facilitando cercanía, comprensión regional y trabajo local.</p>
+                    </div>
+
+                    <!-- Portugués -->
+                    <div class="lang-card reveal-fade-up delay-100">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇧🇷</span>
+                                <h3 class="lang-name">Portugués</h3>
+                            </div>
+                            <span class="lang-level-badge">Intermedio · 60%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="60"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>Conversación Activa</span>
+                            <span>Zona Fronteriza CDE</span>
+                        </div>
+                        <p class="lang-desc">Comprensión sólida y capacidad de comunicación comercial y técnica con el mercado brasileño y regional.</p>
+                    </div>
+
+                    <!-- Chino -->
+                    <div class="lang-card reveal-fade-up delay-200">
+                        <div class="lang-header">
+                            <div class="lang-info">
+                                <span class="lang-flag">🇨🇳</span>
+                                <h3 class="lang-name">Chino Mandarín</h3>
+                            </div>
+                            <span class="lang-level-badge">Elemental · 40%</span>
+                        </div>
+                        <div class="lang-progress-container">
+                            <div class="lang-progress-bar" data-percent="40"></div>
+                        </div>
+                        <div class="lang-meta">
+                            <span>En Aprendizaje Activo</span>
+                            <span>Fundamentos & Fonética</span>
+                        </div>
+                        <p class="lang-desc">Conocimiento de caracteres básicos, fonética Pinyin, estructuras gramaticales esenciales y vocabulario cotidiano.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             5. HABILIDADES TÉCNICAS & BLANDAS (SKILLS HUB)
+             ======================================================================== -->
+        <section id="habilidades" class="section skills-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-gears"></i> Competencias Reales</span>
+                    <h2 class="section-title">Habilidades & Herramientas</h2>
+                    <p class="section-desc">Dominio técnico integral extraído de mi formación en informática y proyectos aplicados.</p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="skills-filter-nav reveal-fade-up">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="drones">Drones & Pilotaje</button>
+                    <button class="filter-btn" data-filter="software">Software & Web</button>
+                    <button class="filter-btn" data-filter="games">Videojuegos</button>
+                    <button class="filter-btn" data-filter="hardware">Robótica & Hardware</button>
+                    <button class="filter-btn" data-filter="design">Diseño & Ofimática</button>
+                    <button class="filter-btn" data-filter="soft">Habilidades Blandas</button>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <!-- Instructor en Manejo y Pilotaje de Drones -->
+                    <div class="skill-card reveal-fade-up" data-category="drones">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-helicopter" style="color: #06b6d4;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Instructor en Manejo de Drones</h4>
+                                <span class="skill-category-badge">Certificación Profesional</span>
+                            </div>
+                        </div>
+                        <p>Capacitación técnica y personalizada para enseñar a volar drones recreativos y profesionales, normativas aeronáuticas y seguridad de vuelo.</p>
+                    </div>
+
+                    <!-- Filmación Aérea Profesional con Drones -->
+                    <div class="skill-card reveal-fade-up delay-100" data-category="drones">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-video" style="color: #a855f7;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Filmación Aérea 4K & Drones Pro</h4>
+                                <span class="skill-category-badge">Producción Audiovisual</span>
+                            </div>
+                        </div>
+                        <p>Tomas aéreas cinematográficas en 4K Ultra HD con estabilización en 3 ejes para eventos, publicidad comercial, inmobiliarias y arquitectura.</p>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-card reveal-fade-up" data-category="software">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-brands fa-python" style="color: #38bdf8;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Python</h4>
+                                <span class="skill-category-badge">Software & Scripts</span>
+                            </div>
+                        </div>
+                        <p>Desarrollo de scripts de automatización, lógica de programación estructurada, consumo de datos y algoritmos eficientes.</p>
+                    </div>
+
+                    <!-- Visual Studio Basic (.NET) -->
+                    <div class="skill-card reveal-fade-up" data-category="software">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-brands fa-microsoft" style="color: #60a5fa;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Visual Studio Basic</h4>
+                                <span class="skill-category-badge">BTI · Aplicaciones .NET</span>
+                            </div>
+                        </div>
+                        <p>Desarrollo de software de escritorio con interfaces de usuario completas, conexión a base de datos y validaciones.</p>
+                    </div>
+
+                    <!-- HTML5, CSS3 & JavaScript -->
+                    <div class="skill-card reveal-fade-up" data-category="software">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-brands fa-html5" style="color: #f97316;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Desarrollo Web</h4>
+                                <span class="skill-category-badge">HTML5 · CSS3 · JS</span>
+                            </div>
+                        </div>
+                        <p>Construcción de sitios responsivos, dinámicos, maquetación moderna, animaciones y compatibilidad móvil.</p>
+                    </div>
+
+                    <!-- Windsurf & Google Sites -->
+                    <div class="skill-card reveal-fade-up" data-category="software">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-globe" style="color: #06b6d4;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Windsurf & Google Sites</h4>
+                                <span class="skill-category-badge">Plataformas Web</span>
+                            </div>
+                        </div>
+                        <p>Despliegue ágil de portales web interactivos, prototipado rápido y entornos de desarrollo asistido de vanguardia.</p>
+                    </div>
+
+                    <!-- SQL & Bases de Datos -->
+                    <div class="skill-card reveal-fade-up" data-category="software">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-database" style="color: #a855f7;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Bases de Datos SQL</h4>
+                                <span class="skill-category-badge">Gestión Relacional</span>
+                            </div>
+                        </div>
+                        <p>Creación de tablas, modelos relacionales, consultas estructuradas, operaciones CRUD y mantenimiento de integridad de datos.</p>
+                    </div>
+
+                    <!-- Unreal Engine (Ganador Asunción) -->
+                    <div class="skill-card reveal-fade-up" data-category="games">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-gamepad" style="color: #fbbf24;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Unreal Engine 5</h4>
+                                <span class="skill-category-badge">🏆 Ganador Asunción</span>
+                            </div>
+                        </div>
+                        <p>Creación de mecánicas de juego en 3D galardonadas con el 1er lugar en Asunción, controladores de personajes, iluminación y Blueprints.</p>
+                    </div>
+
+                    <!-- Scratch -->
+                    <div class="skill-card reveal-fade-up" data-category="games">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-puzzle-piece" style="color: #fbbf24;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Scratch</h4>
+                                <span class="skill-category-badge">Lógica Lúdica</span>
+                            </div>
+                        </div>
+                        <p>Programación lógica de videojuegos educativos, diseño de mecánicas interactivas y animación por bloques.</p>
+                    </div>
+
+                    <!-- Unity, Godot & C# / C++ -->
+                    <div class="skill-card reveal-fade-up" data-category="games">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-brands fa-unity" style="color: #cbd5e1;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Unity, Godot & C# / C++</h4>
+                                <span class="skill-category-badge">Desarrollo de Juegos</span>
+                            </div>
+                        </div>
+                        <p>Fundamentos sólidos de desarrollo de videojuegos 2D y 3D, programación orientada a objetos y optimización de rendimiento.</p>
+                    </div>
+
+                    <!-- Robótica & Arduino IDE -->
+                    <div class="skill-card reveal-fade-up" data-category="hardware">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-robot" style="color: #10b981;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Robótica Básica & Arduino IDE</h4>
+                                <span class="skill-category-badge">Microcontroladores</span>
+                            </div>
+                        </div>
+                        <p>Programación en C/C++ sobre Arduino, lectura de sensores digitales y analógicos, control de motores y circuitos.</p>
+                    </div>
+
+                    <!-- Makey Makey & Proyectos Interactivos -->
+                    <div class="skill-card reveal-fade-up" data-category="hardware">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-plug-circle-bolt" style="color: #f59e0b;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Maky Makey</h4>
+                                <span class="skill-category-badge">Proyectos Interactivos</span>
+                            </div>
+                        </div>
+                        <p>Creación de interfaces físicas interactivas convirtiendo objetos cotidianos y circuitos en controladores computacionales.</p>
+                    </div>
+
+                    <!-- Ensamblaje y Mantenimiento de Computadoras -->
+                    <div class="skill-card reveal-fade-up" data-category="hardware">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench" style="color: #38bdf8;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Mantenimiento de PC</h4>
+                                <span class="skill-category-badge">Hardware & Soporte</span>
+                            </div>
+                        </div>
+                        <p>Diagnóstico de hardware, ensamblaje de componentes, optimización térmica, instalación de sistemas operativos y resolución de fallas.</p>
+                    </div>
+
+                    <!-- Operador de Ofimática & Microsoft Office -->
+                    <div class="skill-card reveal-fade-up" data-category="design">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-file-excel" style="color: #22c55e;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Operador de Ofimática</h4>
+                                <span class="skill-category-badge">Suite MS Office Completa</span>
+                            </div>
+                        </div>
+                        <p>Manejo avanzado de Microsoft Word, Excel (fórmulas, tablas dinámicas, análisis) y PowerPoint para reportes corporativos.</p>
+                    </div>
+
+                    <!-- Diseño Gráfico: Canva, Photoshop & CorelDRAW -->
+                    <div class="skill-card reveal-fade-up" data-category="design">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-palette" style="color: #ec4899;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Diseño & Multimedia</h4>
+                                <span class="skill-category-badge">Photoshop · Corel · Canva</span>
+                            </div>
+                        </div>
+                        <p>Edición fotográfica profesional, vectorización de logotipos, creación de piezas publicitarias e identidad corporativa.</p>
+                    </div>
+
+                    <!-- Community Manager Certificado SNPP -->
+                    <div class="skill-card reveal-fade-up" data-category="design">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-bullhorn" style="color: #10b981;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Community Manager</h4>
+                                <span class="skill-category-badge">Certificado Oficial SNPP</span>
+                            </div>
+                        </div>
+                        <p>Gestión profesional de comunidades online, pauta digital, planes de social media y métricas con titulación oficial del SNPP.</p>
+                    </div>
+
+                    <!-- Soft Skill: Decisión Rápida & Adaptabilidad -->
+                    <div class="skill-card reveal-fade-up" data-category="soft">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-brain" style="color: #06b6d4;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Pensamiento Crítico & Adaptabilidad</h4>
+                                <span class="skill-category-badge">Habilidad Blanda</span>
+                            </div>
+                        </div>
+                        <p>Capacidad para analizar problemas a fondo, tomar decisiones acertadas bajo presión y ajustarse con agilidad a nuevos desafíos.</p>
+                    </div>
+
+                    <!-- Soft Skill: Proactividad & Aprendizaje Rápido -->
+                    <div class="skill-card reveal-fade-up" data-category="soft">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-rocket" style="color: #e11d48;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Proactividad & Aprendizaje Rápido</h4>
+                                <span class="skill-category-badge">Habilidad Blanda</span>
+                            </div>
+                        </div>
+                        <p>Iniciativa constante para resolver retos sin requerir supervisión permanente y asimilación acelerada de herramientas técnicas.</p>
+                    </div>
+
+                    <!-- Soft Skill: Trabajo en Equipo & Comunicación -->
+                    <div class="skill-card reveal-fade-up" data-category="soft">
+                        <div class="skill-top">
+                            <div class="skill-icon"><i class="fa-solid fa-users" style="color: #10b981;"></i></div>
+                            <div class="skill-meta">
+                                <h4>Comunicación & Trabajo en Equipo</h4>
+                                <span class="skill-category-badge">Habilidad Blanda</span>
+                            </div>
+                        </div>
+                        <p>Transmisión clara de ideas, escucha activa, puntualidad rigurosa y colaboración armónica con compañeros de proyecto.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             6. PROYECTOS DESTACADOS SECTION
+             ======================================================================== -->
+        <section id="proyectos" class="section projects-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio de Trabajos</span>
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-desc">Demostraciones prácticas que integran desarrollo de software, robótica, motores de videojuegos y diseño digital.</p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Proyecto 1: Makey Makey & Arduino -->
+                    <div class="project-card reveal-fade-up">
+                        <div class="project-thumb-box">
+                            <img src="assets/project-robotics.jpg" alt="Controlador Interactivo Robótica Arduino y Makey Makey" class="project-thumb">
+                            <div class="project-overlay"></div>
+                            <span class="project-category-tag">Robótica & Hardware</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Controlador Interactivo Makey Makey & Arduino IDE</h3>
+                            <p class="project-desc">
+                                Sistema interactivo que conecta sensores táctiles y circuitos físicos con la computadora en tiempo real, transformando señales analógicas en comandos digitales interactivos.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Arduino IDE</span>
+                                <span class="tech-badge">Makey Makey</span>
+                                <span class="tech-badge">C/C++</span>
+                                <span class="tech-badge">Sensores</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm" onclick="openProjectModal('robotics')">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Ver Detalles</span>
+                                </button>
+                                <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20interes%C3%B3%20tu%20proyecto%20de%20Rob%C3%B3tica%20y%20Arduino." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Consultar por WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Consultar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2: Unreal Engine & Videojuegos Ganador Asunción -->
+                    <div class="project-card reveal-fade-up delay-100">
+                        <div class="project-thumb-box">
+                            <img src="assets/project-game.jpg" alt="Videojuego en Unreal Engine 5 Ganador Asunción" class="project-thumb">
+                            <div class="project-overlay"></div>
+                            <span class="project-category-tag" style="background: rgba(245, 158, 11, 0.85); color: #000; font-weight:800;">🏆 1er Puesto Asunción</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Videojuego 3D (Ganador Competencia Nacional Asunción)</h3>
+                            <p class="project-desc">
+                                Galardonado con el <strong>Primer Lugar</strong> en la competencia nacional de videojuegos en Asunción. Mecánicas de combate dinámicas, físicas avanzadas, iluminación volumétrica y controladores fluidos en Unreal Engine 5.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">🏆 Campeón Asunción</span>
+                                <span class="tech-badge">Unreal Engine 5</span>
+                                <span class="tech-badge">Blueprints</span>
+                                <span class="tech-badge">Físicas 3D</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm" onclick="openProjectModal('videogame')">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Ver Detalles</span>
+                                </button>
+                                <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tu%20videojuego%20premiado%20en%20Asunci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Consultar por WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Consultar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3: Drones Profesionales & Filmación Aérea -->
+                    <div class="project-card reveal-fade-up delay-200">
+                        <div class="project-thumb-box">
+                            <img src="assets/project-drone.jpg" alt="Instrucción y Filmación Aérea con Drones Profesionales" class="project-thumb">
+                            <div class="project-overlay"></div>
+                            <span class="project-category-tag">🚁 Drones & Filmación</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Instrucción & Filmación Aérea con Drones Profesionales</h3>
+                            <p class="project-desc">
+                                Clases técnicas de pilotaje dictadas por instructor certificado para drones recreativos y profesionales, además de producción y captura de filmaciones cinematográficas en 4K UHD.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Instructor Certificado</span>
+                                <span class="tech-badge">Pilotaje Profesional</span>
+                                <span class="tech-badge">Filmación 4K</span>
+                                <span class="tech-badge">Gimbal 3 Ejes</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm" onclick="openProjectModal('drone')">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Ver Detalles</span>
+                                </button>
+                                <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20deseo%20consultar%20por%20tus%20servicios%20de%20clases%20o%20filmaci%C3%B3n%20con%20drones." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Consultar por WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Consultar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 4: Sistema de Gestión SQL & Visual Studio -->
+                    <div class="project-card reveal-fade-up">
+                        <div class="project-thumb-box">
+                            <img src="assets/project-management.jpg" alt="Software de Gestión Empresarial y Bases de Datos SQL" class="project-thumb">
+                            <div class="project-overlay"></div>
+                            <span class="project-category-tag">Software Empresarial</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Sistema de Gestión Administrativo & Base de Datos</h3>
+                            <p class="project-desc">
+                                Aplicación para la administración de inventarios, registro de ventas y control de usuarios conectada a base de datos relacional mediante consultas SQL optimizadas.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Visual Basic .NET</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Ofimática</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm" onclick="openProjectModal('management')">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Ver Detalles</span>
+                                </button>
+                                <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20quisiera%20informaci%C3%B3n%20sobre%20tus%20sistemas%20de%20gesti%C3%B3n%20y%20bases%20de%20datos." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Consultar por WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Consultar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 5: E-Commerce & UI/UX -->
+                    <div class="project-card reveal-fade-up delay-100">
+                        <div class="project-thumb-box">
+                            <img src="assets/project-web.jpg" alt="Plataforma Web E-Commerce y Diseño UI/UX" class="project-thumb">
+                            <div class="project-overlay"></div>
+                            <span class="project-category-tag">Web & UI/UX</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Plataforma Web E-Commerce & Diseño UI/UX</h3>
+                            <p class="project-desc">
+                                Aplicación web comercial moderna con catálogo de productos, carrito de compras, maquetación adaptativa, diseño en Photoshop/Canva y experiencia visual de alto impacto.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5 / CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Photoshop</span>
+                                <span class="tech-badge">Canva</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm" onclick="openProjectModal('web')">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Ver Detalles</span>
+                                </button>
+                                <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20interesa%20un%20sitio%20web%20o%20e-commerce." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Consultar por WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <span>Consultar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             7. SERVICIOS & MÉTODOS DE PAGO (PAYPAL & BANCO UENO)
+             ======================================================================== -->
+        <section id="servicios" class="section services-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Contratación & Capacitación</span>
+                    <h2 class="section-title">Servicios Profesionales</h2>
+                    <p class="section-desc">Instrucción certificada en manejo de drones, filmación aérea en 4K, desarrollo de videojuegos premiados y gestión digital de marcas.</p>
+                </div>
+
+                <!-- Tarjetas de Oferta de Servicios -->
+                <div class="services-offerings-grid reveal-fade-up">
+                    
+                    <!-- Servicio 1: Clases e Instrucción de Drones -->
+                    <div class="service-offer-card">
+                        <div class="service-offer-icon drone">
+                            <i class="fa-solid fa-helicopter"></i>
+                        </div>
+                        <h3>Instrucción de Drones</h3>
+                        <p>Clases personalizadas teórico-prácticas para aprender a volar drones profesionales o de filmación con total seguridad y dominio de controles.</p>
+                        <ul class="service-offer-features">
+                            <li><i class="fa-solid fa-check"></i> Fundamentos aeronáuticos y calibración</li>
+                            <li><i class="fa-solid fa-check"></i> Práctica de vuelo en campo abierto</li>
+                            <li><i class="fa-solid fa-check"></i> Modos GPS, cine y maniobras de emergencia</li>
+                        </ul>
+                        <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20gustar%C3%ADa%20tomar%20clases%20de%20manejo%20de%20drones%20profesionales." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Agendar Clases</span>
+                        </a>
+                    </div>
+
+                    <!-- Servicio 2: Filmación Aérea 4K -->
+                    <div class="service-offer-card">
+                        <div class="service-offer-icon film">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3>Filmación Aérea 4K</h3>
+                        <p>Tomas cinematográficas aéreas en Ultra HD para eventos corporativos, bienes raíces, proyectos inmobiliarios, publicidad y cine.</p>
+                        <ul class="service-offer-features">
+                            <li><i class="fa-solid fa-check"></i> Video 4K a 60fps con gimbal estabilizado</li>
+                            <li><i class="fa-solid fa-check"></i> Planificación satelital de tomas</li>
+                            <li><i class="fa-solid fa-check"></i> Entrega de tomas en bruto o editadas</li>
+                        </ul>
+                        <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20necesito%20un%20servicio%20de%20filmaci%C3%B3n%20a%C3%A9rea%20con%20drone%20profesional." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Cotizar Filmación</span>
+                        </a>
+                    </div>
+
+                    <!-- Servicio 3: Videojuegos & Software -->
+                    <div class="service-offer-card">
+                        <div class="service-offer-icon game">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3>Videojuegos & Software</h3>
+                        <p>Desarrollo de prototipos y videojuegos interactivos 2D/3D con Unreal Engine y software a medida en Python y Visual Basic .NET.</p>
+                        <ul class="service-offer-features">
+                            <li><i class="fa-solid fa-check"></i> Ganador nacional de videojuegos (Asunción)</li>
+                            <li><i class="fa-solid fa-check"></i> Mecánicas 3D y controladores fluidos</li>
+                            <li><i class="fa-solid fa-check"></i> Software de inventario y bases SQL</li>
+                        </ul>
+                        <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20quisiera%20consultar%20sobre%20desarrollo%20de%20software%20o%20videojuegos." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Consultar Proyecto</span>
+                        </a>
+                    </div>
+
+                    <!-- Servicio 4: Community Manager SNPP -->
+                    <div class="service-offer-card">
+                        <div class="service-offer-icon marketing">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3>Community Manager SNPP</h3>
+                        <p>Gestión estratégica de presencia digital en redes sociales, diseño de piezas visuales y optimización de interacción con el público.</p>
+                        <ul class="service-offer-features">
+                            <li><i class="fa-solid fa-check"></i> Certificación oficial del SNPP</li>
+                            <li><i class="fa-solid fa-check"></i> Contenido gráfico (Photoshop/Canva)</li>
+                            <li><i class="fa-solid fa-check"></i> Reportes analíticos de engagement</li>
+                        </ul>
+                        <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20interesa%20tu%20servicio%20de%20Community%20Manager." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Contratar Servicio</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="payment-gateway-wrapper">
+                    
+                    <!-- Opción 1: PayPal y Tarjetas -->
+                    <div class="payment-card reveal-fade-up">
+                        <div class="payment-card-header">
+                            <div class="header-icon">
+                                <i class="fa-brands fa-paypal"></i>
+                            </div>
+                            <h3>Pago Internacional Online</h3>
+                            <p>Acepta tarjetas de crédito y débito Visa, Mastercard y saldo PayPal de forma 100% segura y encriptada.</p>
+                        </div>
+
+                        <div class="amount-selection-box">
+                            <label for="donation-amount">Selecciona el monto en USD:</label>
+                            <div class="amount-chips">
+                                <button type="button" class="amount-chip" data-amount="10">$10</button>
+                                <button type="button" class="amount-chip" data-amount="25">$25</button>
+                                <button type="button" class="amount-chip active" data-amount="50">$50</button>
+                                <button type="button" class="amount-chip" data-amount="100">$100</button>
+                            </div>
+                            <input type="number" id="donation-amount" value="50" min="1" step="1" class="custom-amount-input" placeholder="O ingresa un monto personalizado en USD">
+                        </div>
+
+                        <div id="paypal-button-container"></div>
+
+                        <div class="security-seal">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Transacción cifrada y respaldada por PayPal Inc.</span>
+                        </div>
+                    </div>
+
+                    <!-- Opción 2: Transferencia Bancaria Directa (Banco Ueno) -->
+                    <div class="payment-card reveal-fade-up delay-200">
+                        <div class="payment-card-header">
+                            <div class="header-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <h3>Transferencia Directa (Paraguay)</h3>
+                            <p>Para transferencias inmediatas en Guaraníes (PYG) o USD dentro del territorio nacional.</p>
+                        </div>
+
+                        <div class="bank-info-panel">
+                            <div class="bank-row">
+                                <span class="label">Entidad Financiera:</span>
+                                <span class="val"><i class="fa-solid fa-shield-halved text-cyan" style="color: var(--accent-cyan); margin-right: 5px;"></i>Banco Ueno</span>
+                            </div>
+                            <div class="bank-row">
+                                <span class="label">Número de Cuenta:</span>
+                                <span class="val account-number-highlight">6191969491</span>
+                            </div>
+                            <div class="bank-row">
+                                <span class="label">Titular de la Cuenta:</span>
+                                <span class="val">Erwan Gras</span>
+                            </div>
+                            <div class="bank-row">
+                                <span class="label">Ubicación:</span>
+                                <span class="val">Ciudad del Este, Alto Paraná</span>
+                            </div>
+                        </div>
+
+                        <div class="bank-actions">
+                            <button type="button" class="btn btn-primary" id="copy-bank-btn">
+                                <i class="fa-solid fa-copy"></i>
+                                <span>Copiar Número de Cuenta</span>
+                            </button>
+                            <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20te%20adjunto%20el%20comprobante%20de%20la%20transferencia%20bancaria." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enviar Comprobante por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================
+             8. CONTACTO DIRECTO SECTION
+             ======================================================================== -->
+        <section id="contacto" class="section contact-section">
+            <div class="container">
+                <div class="section-header reveal-fade-up">
+                    <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Comunicación Abierta</span>
+                    <h2 class="section-title">Iniciemos una Conversación</h2>
+                    <p class="section-desc">¿Tienes un proyecto, vacante de pasantía técnica o propuesta de colaboración? Escríbeme directamente.</p>
+                </div>
+
+                <div class="contact-layout">
+                    
+                    <!-- Direct Info Cards -->
+                    <div class="contact-cards-column reveal-fade-up">
+                        
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/595973151716?text=Hola%20Erwan,%20me%20comunico%20desde%20tu%20portafolio." target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                            <div class="contact-icon-box whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>WhatsApp Directo</h4>
+                                <p>+595 973 151 716 · Respuesta rápida</p>
+                            </div>
+                        </a>
+
+                        <!-- Email Card -->
+                        <a href="mailto:jsuauusjsuudud@gmail.com" class="contact-method-card" id="copy-email-btn" title="Haz clic para copiar el correo">
+                            <div class="contact-icon-box email">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Correo Electrónico</h4>
+                                <p>jsuauusjsuudud@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/erwan-gras-864860314" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                            <div class="contact-icon-box linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>LinkedIn Profesional</h4>
+                                <p>linkedin.com/in/erwan-gras-864860314</p>
+                            </div>
+                        </a>
+
+                        <!-- Location Card -->
+                        <div class="contact-method-card">
+                            <div class="contact-icon-box location">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="contact-method-info">
+                                <h4>Ubicación</h4>
+                                <p>Km 4 Monday, Barrio San José, Ciudad del Este, Paraguay</p>
+                            </div>
+                        </div>
+
+                        <!-- CV Download Banner -->
+                        <div style="margin-top: 0.5rem;">
+                            <a href="assets/Curriculum_Erwan_Gras.pdf" download="Curriculum_Erwan_Gras.pdf" class="btn btn-primary" style="width: 100%;">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>Descargar Currículum Completo (PDF)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Contact Form -->
+                    <div class="contact-form-card reveal-fade-up delay-200">
+                        <h3>Envíame un Mensaje</h3>
+                        <p>Completa el siguiente formulario y me pondré en contacto contigo a la brevedad.</p>
+
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Nombre y Apellido *</label>
+                                <input type="text" id="form-name" class="form-control" placeholder="Ej. Carlos Martínez" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-email">Correo Electrónico *</label>
+                                <input type="email" id="form-email" class="form-control" placeholder="tu@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">¿En qué puedo ayudarte? *</label>
+                                <textarea id="form-message" class="form-control" rows="4" placeholder="Describe tu proyecto, consulta de servicio o propuesta laboral..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================================
+         FOOTER
+         ======================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="brand-badge">EG</div>
+                        <span class="brand-name">Erwan Gras</span>
+                    </div>
+                    <p>Desarrollador de software y técnico en informática enfocado en soluciones eficientes, robótica interactiva y tecnología de alto impacto.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobre-mi">Sobre Mí</a>
+                    <a href="#formacion">Formación</a>
+                    <a href="#idiomas">Idiomas</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Erwan Gras · Bachillerato Técnico en Informática (CRECE). Todos los derechos reservados.</p>
+                <p>Ciudad del Este, Alto Paraná, Paraguay</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================
+         PROJECT DETAILS MODAL
+         ======================================================================== -->
+    <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar ventana emergente">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-body-content">
+                <!-- Se llena dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    
+    <!-- Custom JavaScript with cache buster -->
+    <script src="script.js?v=2.5"></script>
+</body>
+</html>
