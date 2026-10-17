@@ -1,14 +1,14 @@
 # 🚀 Portafolio Profesional de Erwan Gras
 
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://erwangras.github.io/Portafolio/)
-[![Estado](https://img.shields.io/badge/Estado-Disponible%20para%20Contrataci%C3%B3n-10b981?style=for-the-badge)](https://erwangras.github.io/Portafolio/#contacto)
-[![Tecnologías](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-6366f1?style=for-the-badge)](https://erwangras.github.io/Portafolio/#habilidades)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://erwangras.github.io/)
+[![Estado](https://img.shields.io/badge/Estado-Disponible%20para%20Contrataci%C3%B3n-10b981?style=for-the-badge)](https://erwangras.github.io/#contacto)
+[![Tecnologías](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-6366f1?style=for-the-badge)](https://erwangras.github.io/#habilidades)
 
 Bienvenido al repositorio oficial del **Portafolio Web Profesional de Erwan Gras**.  
 Diseñado bajo una estética moderna **Obsidian Glassmorphism**, optimizado para velocidad, accesibilidad y máxima conversión de clientes y reclutadores.
 
 🔗 **Enlace web en vivo para compartir:**  
-👉 **[https://erwangras.github.io/Portafolio/](https://erwangras.github.io/Portafolio/)**
+👉 **[https://erwangras.github.io/](https://erwangras.github.io/)**
 
 ---
 
@@ -125,7 +125,7 @@ git push origin main
 ```
 
 > ⚡ **¡Y listo!**  
-> GitHub Pages detectará el nuevo `git push` y en aproximadamente **1 a 2 minutos** tu portafolio en vivo en **https://erwangras.github.io/Portafolio/** se actualizará automáticamente sin que tengas que hacer nada más.
+> GitHub Pages detectará el nuevo `git push` y en aproximadamente **1 a 2 minutos** tu portafolio en vivo en **https://erwangras.github.io/** se actualizará automáticamente sin que tengas que hacer nada más.
 
 ---
 
